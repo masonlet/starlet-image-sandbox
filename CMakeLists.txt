@@ -16,6 +16,9 @@ file(GLOB_RECURSE ASSETS  CONFIGURE_DEPENDS "${ASSET_DIR}/*")
 add_executable(${PROJ_NAME} ${SOURCES} ${HEADERS})
 target_include_directories(${PROJ_NAME} PUBLIC "${INC_DIR}")
 
+file(TO_CMAKE_PATH "${ASSET_DIR}" ASSET_PATH)
+target_compile_definitions(${PROJ_NAME} PRIVATE ASSET_DIR="${ASSET_PATH}")
+
 source_group(TREE ${SRC_DIR} PREFIX "Source Files" FILES ${SOURCES})
 source_group(TREE ${INC_DIR} PREFIX "Header Files" FILES ${HEADERS})
 
