@@ -2,6 +2,9 @@
 
 A C++ playground for experimenting with images loaded using **StarletSerializer.**
 
+## Features
+- **BMP** to **Console ASCII**
+
 ## Building the Project
 This project uses **CMake**. Follow these steps to build:
 
