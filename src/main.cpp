@@ -18,7 +18,12 @@ int main(int argc, char* argv[]) {
 	if (!data.has_value()) 
 		return EXIT_FAILURE;
 
-	SSandbox::displayAsAscii(data.value(), config.value());
+	switch (config->outputMode) {
+	case SSandbox::OutputMode::Ascii:
+		SSandbox::displayAsAscii(data.value(), config.value());
+		break;
+	}
+
 	return EXIT_SUCCESS;
 }
 

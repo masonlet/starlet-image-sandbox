@@ -85,6 +85,25 @@ namespace Starlet::Sandbox {
 					return std::nullopt;
 				}
 			}
+
+			else if (arg == "--mode" || arg == "-m") {
+				if(i + 1 >= argc) {
+					Serializer::error("Image Sandbox", "parseArgs", "No mode specified after " + arg);
+					return std::nullopt;
+				}
+
+				std::string mode = argv[++i];
+				if (mode == "ascii") config.outputMode = OutputMode::Ascii;
+				else {
+					Serializer::error("Image Sandbox", "parseArgs", "Invalid mode: " + mode);
+					return std::nullopt;
+				}
+			}
+
+			else {
+				Serializer::error("Image Sandbox", "parseArgs", "Unknown argument: " + arg);
+				return std::nullopt;
+			}
 		}
 
 		return config;
