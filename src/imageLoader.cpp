@@ -1,7 +1,7 @@
 #include "imageLoader.hpp"
 
 #include "StarletSerializer/parser/bmpParser.hpp"
-#include "StarletSerializer/utils/log.hpp"
+#include "StarletLogger/logger.hpp"
 
 namespace Starlet::Sandbox {
 	std::optional<Serializer::BmpData> loadImage(const std::string& filePath) {
@@ -9,7 +9,7 @@ namespace Starlet::Sandbox {
 		Starlet::Serializer::BmpData data;
 
 		if (!parser.parse(filePath, data)) {
-			Starlet::Serializer::error("Image Sandbox", "loadImage", "Failed to parse image: " + filePath);
+			Starlet::Logger::error("Image Sandbox", "loadImage", "Failed to parse image: " + filePath);
 			return std::nullopt;
 		}
 

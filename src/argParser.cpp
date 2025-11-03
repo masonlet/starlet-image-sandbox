@@ -1,6 +1,6 @@
 #include "argParser.hpp"
 
-#include "StarletSerializer/utils/log.hpp"
+#include "StarletLogger/logger.hpp"
 
 #include <iostream>
 
@@ -20,13 +20,13 @@ namespace Starlet::Sandbox {
 			int value = std::stoi(arg);
 
 			if (value <= 0) {
-				Serializer::error("Image Sandbox", "parseArg", argName + " must be a positive integer");
+				Logger::error("Image Sandbox", "parseArg", argName + " must be a positive integer");
 				return std::nullopt;
 			}
 			return value;
 		}
 		catch (const std::exception&) {
-			Serializer::error("Image Sandbox", "parseArg", "Invalid integer for: " + argName);
+			Logger::error("Image Sandbox", "parseArg", "Invalid integer for: " + argName);
 			return std::nullopt;
 		}
 	}
@@ -44,7 +44,7 @@ namespace Starlet::Sandbox {
 
 			else if (arg == "--path" || arg == "-p") {
 				if (i + 1 >= argc) {
-					Serializer::error("Image Sandbox", "parseArgs", "No path specified after " + arg);
+					Logger::error("Image Sandbox", "parseArgs", "No path specified after " + arg);
 					return std::nullopt;
 				}
 
@@ -53,7 +53,7 @@ namespace Starlet::Sandbox {
 
 			else if (arg == "--scale-x" || arg == "-x") {
 				if (i + 1 >= argc) {
-					Serializer::error("Image Sandbox", "parseArgs", "No scale specified after " + arg);
+					Logger::error("Image Sandbox", "parseArgs", "No scale specified after " + arg);
 					return std::nullopt;
 				}
 
@@ -64,7 +64,7 @@ namespace Starlet::Sandbox {
 
 			else if (arg == "--scale-y" || arg == "-y") {
 				if (i + 1 >= argc) {
-					Serializer::error("Image Sandbox", "parseArgs", "No scale specified after " + arg);
+					Logger::error("Image Sandbox", "parseArgs", "No scale specified after " + arg);
 					return std::nullopt;
 				}
 
@@ -75,33 +75,33 @@ namespace Starlet::Sandbox {
 
 			else if (arg == "--gradient" || arg == "-g") {
 				if (i + 1 >= argc) {
-					Serializer::error("Image Sandbox", "parseArgs", "No gradient specified after " + arg);
+					Logger::error("Image Sandbox", "parseArgs", "No gradient specified after " + arg);
 					return std::nullopt;
 				}
 
 				config.gradient = argv[++i];
 				if (config.gradient.empty()) {
-					Serializer::error("Image Sandbox", "parseArgs", "Gradient string cannot be empty");
+					Logger::error("Image Sandbox", "parseArgs", "Gradient string cannot be empty");
 					return std::nullopt;
 				}
 			}
 
 			else if (arg == "--mode" || arg == "-m") {
 				if(i + 1 >= argc) {
-					Serializer::error("Image Sandbox", "parseArgs", "No mode specified after " + arg);
+					Logger::error("Image Sandbox", "parseArgs", "No mode specified after " + arg);
 					return std::nullopt;
 				}
 
 				std::string mode = argv[++i];
 				if (mode == "ascii") config.outputMode = OutputMode::Ascii;
 				else {
-					Serializer::error("Image Sandbox", "parseArgs", "Invalid mode: " + mode);
+					Logger::error("Image Sandbox", "parseArgs", "Invalid mode: " + mode);
 					return std::nullopt;
 				}
 			}
 
 			else {
-				Serializer::error("Image Sandbox", "parseArgs", "Unknown argument: " + arg);
+				Logger::error("Image Sandbox", "parseArgs", "Unknown argument: " + arg);
 				return std::nullopt;
 			}
 		}
