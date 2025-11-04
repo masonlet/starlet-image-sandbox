@@ -6,7 +6,8 @@
 
 namespace Starlet::Sandbox {
 	enum class OutputMode {
-		Ascii
+		Ascii,
+		AsciiColour
 	};
 
 	struct Config {

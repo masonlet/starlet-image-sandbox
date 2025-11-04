@@ -94,6 +94,7 @@ namespace Starlet::Sandbox {
 
 				std::string mode = argv[++i];
 				if (mode == "ascii") config.outputMode = OutputMode::Ascii;
+				else if (mode == "ascii_colour") config.outputMode = OutputMode::AsciiColour;
 				else {
 					Logger::error("Image Sandbox", "parseArgs", "Invalid mode: " + mode);
 					return std::nullopt;

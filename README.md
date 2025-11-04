@@ -6,6 +6,9 @@ A C++ playground for experimenting with images loaded using **StarletSerializer.
 - **BMP** to **Console ASCII**
 ![Example](./images/skull.png)
 
+- **BMP** to **Colour Console ASCII**
+![Colour Example](./images/skull_colour.png)
+
 ## Building the Project
 This project uses **CMake**. Follow these steps to build:
 

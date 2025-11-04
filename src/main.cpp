@@ -22,6 +22,9 @@ int main(int argc, char* argv[]) {
 	case SSandbox::OutputMode::Ascii:
 		SSandbox::displayAsAscii(data.value(), config.value());
 		break;
+	case SSandbox::OutputMode::AsciiColour:
+		SSandbox::displayAsAsciiColour(data.value(), config.value());
+		break;
 	}
 
 	return EXIT_SUCCESS;
