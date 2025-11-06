@@ -3,11 +3,43 @@
 A C++ playground for experimenting with images loaded using **StarletSerializer.**
 
 ## Features
-- **BMP** to **Console ASCII**
+- Supported Image Formats: **BMP**, **TGA**
+
+- Output to **Console ASCII**
 ![Example](./images/skull.png)
 
-- **BMP** to **Colour Console ASCII**
+- Output to **Coloured Console ASCII**
 ![Colour Example](./images/skull_colour.png)
+
+## Usage
+```bash
+# Basic usage
+./StarletImageSandbox
+
+# Specify an image file
+./StarletImageSandbox -p path/to/image
+
+# Adjust ASCII scaling
+./StarletImageSandbox -x 8 -y 16
+
+# Use coloured output mode
+./StarletImageSandbox -m ascii_colour
+
+# Custom ASCII gradient
+./StarletImageSandbox -g " .:-=+*#%@"
+```
+
+### Options:
+- `--help, -h` - Show help message
+- `--path, -p <path>` - Image file path (default: beetle.tga)
+- `--scale-x, -x <int>` - Horizontal scaling factor (default: 16)
+- `--scale-y, -y <int>` - Vertical scaling factor (default: 32)
+- `--gradient, -g <str>` - ASCII gradient string (default: '@%#*+=-:. ')
+- `--mode, -m <mode>` - Output mode: `ascii` or `ascii_colour` (default: ascii)
+
+## Prerequisites
+- CMake 3.14+
+- C++20 compatible compiler
 
 ## Building the Project
 This project uses **CMake**. Follow these steps to build:
