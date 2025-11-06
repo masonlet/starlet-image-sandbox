@@ -1,12 +1,12 @@
 #pragma once
 
-#include "StarletSerializer/data/bmpData.hpp"
+#include "StarletSerializer/data/imageData.hpp"
 
 #include <string>
 #include <optional>
 
 namespace Starlet {
 	namespace Sandbox {
-		std::optional<Serializer::BmpData> loadImage(const std::string& filePath);
+		std::optional<Serializer::ImageData> loadImage(const std::string& filePath);
 	}
 }

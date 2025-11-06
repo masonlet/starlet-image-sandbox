@@ -1,7 +1,7 @@
 #include "asciiConverter.hpp"
 #include "config.hpp"
 
-#include "StarletSerializer/data/bmpData.hpp"
+#include "StarletSerializer/data/imageData.hpp"
 
 #include <iostream>
 
@@ -25,7 +25,7 @@ namespace {
 		char asciiChar;
 	};
 
-	PixelData getPixelData(const Starlet::Serializer::BmpData& data,
+	PixelData getPixelData(const Starlet::Serializer::ImageData& data,
 		const size_t x, const size_t y,
 		const std::string_view& gradient) {
 		const size_t pixelIndex{ (y * data.width + x) * BYTES_PER_PIXEL };
@@ -44,7 +44,7 @@ namespace {
 	}
 }
 
-void displayAsAscii(const Starlet::Serializer::BmpData& data, const Config& config) {
+void displayAsAscii(const Starlet::Serializer::ImageData& data, const Config& config) {
 	const size_t scaledWidth = static_cast<size_t>(data.width + config.scaleX - 1) / config.scaleX;
 	const size_t scaledHeight = static_cast<size_t>(data.height + config.scaleY - 1) / config.scaleY;
 
@@ -63,7 +63,7 @@ void displayAsAscii(const Starlet::Serializer::BmpData& data, const Config& conf
 	std::cout.write(output.data(), output.size());
 }
 
-void displayAsAsciiColour(const Starlet::Serializer::BmpData& data, const Config& config) {
+void displayAsAsciiColour(const Starlet::Serializer::ImageData& data, const Config& config) {
 	const size_t scaledWidth = static_cast<size_t>(data.width + config.scaleX - 1) / config.scaleX;
 	const size_t scaledHeight = static_cast<size_t>(data.height + config.scaleY - 1) / config.scaleY;
 

@@ -4,7 +4,7 @@
 
 namespace Starlet::Sandbox {
 	constexpr std::string_view DEFAULT_GRADIENT { "@%#*+=-:. " };
-	constexpr std::string_view DEFAULT_PATH { "skull.bmp" };
+	constexpr std::string_view DEFAULT_PATH { "beetle.tga" };
 	constexpr int DEFAULT_SCALE_X { 16 };
 	constexpr int DEFAULT_SCALE_Y { 32 };
 

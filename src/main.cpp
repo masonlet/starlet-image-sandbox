@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
 
 	const std::string fullPath{ std::string(ASSET_DIR) + '/' + config->filePath };
 
-	std::optional<Starlet::Serializer::BmpData> data = SSandbox::loadImage(fullPath);
+	std::optional<Starlet::Serializer::ImageData> data = SSandbox::loadImage(fullPath);
 	if (!data.has_value()) 
 		return EXIT_FAILURE;
 

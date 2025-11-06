@@ -2,13 +2,13 @@
 
 namespace Starlet {
 	namespace Serializer {
-		struct BmpData;
+		struct ImageData;
 	}
 
 	namespace Sandbox {
 		struct Config;
 
-		void displayAsAscii(const Serializer::BmpData& data, const Config& config);
-		void displayAsAsciiColour(const Serializer::BmpData& data, const Config& config);
+		void displayAsAscii(const Serializer::ImageData& data, const Config& config);
+		void displayAsAsciiColour(const Serializer::ImageData& data, const Config& config);
 	}
 }
