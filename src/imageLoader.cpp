@@ -1,11 +1,11 @@
 #include "imageLoader.hpp"
 
-#include "StarletSerializer/parser/image/tgaParser.hpp"
+#include "StarletSerializer/parser/imageParser.hpp"
 #include "StarletLogger/logger.hpp"
 
 namespace Starlet::Sandbox {
 	std::optional<Serializer::ImageData> loadImage(const std::string& filePath) {
-		Starlet::Serializer::TgaParser parser;
+		Starlet::Serializer::ImageParser parser;
 		Starlet::Serializer::ImageData data;
 
 		if (!parser.parse(filePath, data)) {
