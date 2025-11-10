@@ -1,7 +1,7 @@
-#include "imageLoader.hpp"
+#include "starlet-image-sandbox/imageLoader.hpp"
 
-#include "StarletSerializer/parser/imageParser.hpp"
-#include "StarletLogger/logger.hpp"
+#include "starlet-serializer/parser/imageParser.hpp"
+#include "starlet-logger/logger.hpp"
 
 namespace Starlet::Sandbox {
 	std::optional<Serializer::ImageData> loadImage(const std::string& filePath) {

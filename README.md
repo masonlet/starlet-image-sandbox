@@ -1,6 +1,6 @@
-# StarletImageSandbox
+# Starlet Image Sandbox
 
-A C++ playground for experimenting with images loaded using **StarletSerializer.**
+A C++ playground for experimenting with images loaded using **Starlet Serializer.**
 
 ## Features
 - Supported Image Formats: **BMP**, **TGA**
@@ -14,19 +14,19 @@ A C++ playground for experimenting with images loaded using **StarletSerializer.
 ## Usage
 ```bash
 # Basic usage
-./StarletImageSandbox
+./starlet-image-sandbox
 
 # Specify an image file
-./StarletImageSandbox -p path/to/image
+./starlet-image-sandbox -p path/to/image
 
 # Adjust ASCII scaling
-./StarletImageSandbox -x 8 -y 16
+./starlet-image-sandbox -x 8 -y 16
 
 # Use coloured output mode
-./StarletImageSandbox -m ascii_colour
+./starlet-image-sandbox -m ascii_colour
 
 # Custom ASCII gradient
-./StarletImageSandbox -g " .:-=+*#%@"
+./starlet-image-sandbox -g " .:-=+*#%@"
 ```
 
 ### Options:
@@ -46,8 +46,8 @@ This project uses **CMake**. Follow these steps to build:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Masonlet/StarletImageSandbox.git
-cd StarletImageSandbox
+git clone https://github.com/masonlet/starlet-image-sandbox.git
+cd starlet-image-sandbox
 ```
 
 ### 2. Create a Build Directory and Generate Build Files

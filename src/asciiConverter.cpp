@@ -1,7 +1,7 @@
-#include "asciiConverter.hpp"
-#include "config.hpp"
+#include "starlet-image-sandbox/asciiConverter.hpp"
+#include "starlet-image-sandbox/config.hpp"
 
-#include "StarletSerializer/data/imageData.hpp"
+#include "starlet-serializer/data/imageData.hpp"
 
 #include <iostream>
 

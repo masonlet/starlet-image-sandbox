@@ -1,7 +1,7 @@
-#include "argParser.hpp"
-#include "imageLoader.hpp"
-#include "asciiConverter.hpp"
-#include "config.hpp"
+#include "starlet-image-sandbox/argParser.hpp"
+#include "starlet-image-sandbox/imageLoader.hpp"
+#include "starlet-image-sandbox/asciiConverter.hpp"
+#include "starlet-image-sandbox/config.hpp"
 
 int main(int argc, char* argv[]) {
 	namespace SSandbox = Starlet::Sandbox;
