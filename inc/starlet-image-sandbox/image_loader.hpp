@@ -1,6 +1,6 @@
 #pragma once
 
-#include "starlet-serializer/data/imageData.hpp"
+#include "starlet-serializer/data/image_data.hpp"
 
 #include <string>
 #include <optional>

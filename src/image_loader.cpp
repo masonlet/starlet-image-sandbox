@@ -1,6 +1,6 @@
-#include "starlet-image-sandbox/imageLoader.hpp"
+#include "starlet-image-sandbox/image_loader.hpp"
 
-#include "starlet-serializer/parser/imageParser.hpp"
+#include "starlet-serializer/parser/image_parser.hpp"
 #include "starlet-logger/logger.hpp"
 
 namespace Starlet::Sandbox {
