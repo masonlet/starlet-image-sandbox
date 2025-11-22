@@ -1,4 +1,4 @@
-#include "starlet-image-sandbox/argParser.hpp"
+#include "starlet-image-sandbox/arg_parser.hpp"
 
 #include "starlet-logger/logger.hpp"
 

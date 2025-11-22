@@ -1,4 +1,4 @@
-#include "starlet-image-sandbox/asciiConverter.hpp"
+#include "starlet-image-sandbox/ascii_converter.hpp"
 #include "starlet-image-sandbox/config.hpp"
 
 #include "starlet-serializer/data/image_data.hpp"
