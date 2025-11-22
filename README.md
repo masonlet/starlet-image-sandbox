@@ -1,14 +1,19 @@
 # Starlet Image Sandbox
 
+[![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://isocpp.org/std/the-standard)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 A C++ playground for experimenting with images loaded using **Starlet Serializer.**
 
 ## Features
 - Supported Image Formats: **BMP**, **TGA**
 
 - Output to **Console ASCII**
+
 ![Example](./images/skull.png)
 
 - Output to **Coloured Console ASCII**
+
 ![Colour Example](./images/skull_colour.png)
 
 ## Usage
@@ -37,6 +42,8 @@ A C++ playground for experimenting with images loaded using **Starlet Serializer
 - `--gradient, -g <str>` - ASCII gradient string (default: '@%#*+=-:. ')
 - `--mode, -m <mode>` - Output mode: `ascii` or `ascii_colour` (default: ascii)
 
+<br/>
+
 ## Prerequisites
 - CMake 3.14+
 - C++20 compatible compiler
@@ -44,29 +51,14 @@ A C++ playground for experimenting with images loaded using **Starlet Serializer
 ## Building the Project
 This project uses **CMake**. Follow these steps to build:
 
-### 1. Clone the Repository
 ```bash
+# Clone the Repostiory
 git clone https://github.com/masonlet/starlet-image-sandbox.git
 cd starlet-image-sandbox
-```
 
-### 2. Create a Build Directory and Generate Build Files
-```bash
-mkdir build
-cd build 
-cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+# Configure and build
+cmake -B build
+cmake --build build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON 
 ```
 `-DCMAKE_EXPORT_COMPILE_COMMANDS=ON` flag generates a `compile_commands.json` file  
 Can be safely omitted on Windows if you're using Visual Studio
-
-### 3. Build the Project
-- **Linux**:
-  ```bash
-  make
-  ```
-
-- **Windows**:
-  ```bash
-  cmake --build .
-  ```
-  Or open the generated `.sln` file in Visual Studio and build the solution.
