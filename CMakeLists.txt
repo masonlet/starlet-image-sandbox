@@ -26,12 +26,14 @@ add_custom_target(Assets SOURCES ${ASSETS})
 set_target_properties(Assets PROPERTIES FOLDER "Assets")
 source_group("Assets" FILES ${ASSETS})
 
-include(FetchContent)
-FetchContent_Declare(starlet_serializer 
-  GIT_REPOSITORY https://github.com/masonlet/starlet-serializer.git 
-  GIT_TAG main
-)
-FetchContent_MakeAvailable(starlet_serializer)
+if(NOT BUILD_LOCAL)
+  include(FetchContent)
+  FetchContent_Declare(starlet_serializer 
+    GIT_REPOSITORY https://github.com/masonlet/starlet-serializer.git 
+    GIT_TAG main
+  )
+  FetchContent_MakeAvailable(starlet_serializer)
+endif()
 
 target_link_libraries(${PROJ_NAME} PUBLIC starlet_serializer)
 
